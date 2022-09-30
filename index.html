@@ -1,0 +1,125 @@
+<html >
+    <head>
+        <style type="text/css">
+            body{
+                margin:0;
+            }
+.parallax {
+  /* The image used */
+  background-image: url("cofeebeanback.jpg");
+filter:brightness(50%)  contrast(-1.5%);
+  /* Set a specific height */
+  width: 100%;
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation:brightlwth 2s;
+  
+ 
+}
+#nextslide{
+    /* Set a specific height */
+    width: 100%;
+  height: 100%; 
+  background-color: rgb(11 11 12);
+z-index: -1;
+}
+
+#hellogret{
+    font-size:27em;
+    background: url(cofeecupback.jpg) no-repeat;
+    font-family: sans-serif;
+    background-size: 1080px, 1920px;
+    -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation:textblurcm 2s;
+}
+@keyframes brightlwth {
+    0%{filter:brightness(0%);}
+    100%{filter:brightness(40%) contrast(-1.5%);}
+}
+@keyframes textblurcm{
+   
+    0%{filter:blur(40px); visibility:hidden;}
+    100%{filter:blur(0px); visibility:visible;}
+}
+@keyframes hidtvis {
+    0%{opacity:-0.5}
+    100%{opacity:5}
+}
+#blboutln{
+        width:100%;
+        position :relative;
+        z-index: 3;
+    }
+    #blbo{
+        width:100%;
+        position :relative;
+        z-index: 2;
+        margin-top:-56.17%;
+    }
+    #hldr{
+        width:100%;
+        position :relative;
+        z-index: 1;
+        margin-top:-56.3%;
+    }
+
+        </style>
+    </head>
+    <body onscroll="decscrldn()">
+        <div class="parallax">
+            <p id="hellogret">Hello</p>
+        </div>
+        
+        <div id="nextslide" onclick="lighton()">
+            <div id="imgcontainer">
+                <img id="blboutln" src="bulboutline.png">
+                <img id="blbo" src="bulb.png">
+                <img id="hldr" src="holder.png">
+                
+            </div>
+        </div>
+
+    </body>
+    <script>
+        function decscrldn(){
+            var chkscrl=(65/100)*window.innerHeight;
+            var scrllen=getscrllen();
+            if(scrllen > chkscrl){
+                scrlto();
+                document.querySelector("#nextslide").style.opacity="5";
+                document.querySelector("#imgcontainer").style.animation= "hidtvis 2s";
+              
+            }
+            else{
+                document.querySelector("#nextslide").style.opacity="0.5";
+            }
+            function visible(){
+                ocument.querySelector("#imgcontainer").style.visibility="visible";
+            }
+        }
+   
+        function lighton(){   
+            var c;
+            if(c=0){
+            document.querySelector("#nextslide").style.filter="brightness(5)";
+              }
+            if(c=1){
+                document.querySelector("#nextslide").style.filter="brightness(5)";
+            }
+    }
+
+        function scrlto(){//scroll to top
+            var yval=window.innerHeight;
+            window.scrollTo(0,yval);
+        }
+        function getscrllen(){//get scroll length
+              return window.scrollY;
+        }
+        </script>
+</html>
