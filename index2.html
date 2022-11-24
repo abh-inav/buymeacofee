@@ -1,1 +1,307 @@
+<html>
+    <head>
+        <style>
+            @font-face {
+  font-family: samsungsharpsans;
+  src: url(font/samsungsharpsans-bold.otf);
+}
 
+body {
+    font-family: samsungsharpsans;
+    margin: 0;
+}
+
+#entersamsungname{
+    font-family: samsungsharpsans;
+    font-size: 186px;
+    text-align: center !important;
+    background:#a3a3bf;    
+    height: 100%;
+    width: 100%;
+    animation: gradientlin 1s cubic-bezier(0.4, 0, 1, 1);
+    padding-top: 10px;
+
+}
+#entersamp{
+    margin-top:76px;
+    animation:txtentr 0.4s;
+  /*#2b2732*/
+}
+
+@keyframes gradientlin {
+  0%  {background-image: linear-gradient(0deg, #1f1821, #cbcbeccb); filter:brightness(0);}
+  4%  {background-image: linear-gradient(15deg, #1f1821, #cbcbeccb);}
+  8%  {background-image: linear-gradient(30deg, #1f1821, #cbcbeccb);}
+  12%  {background-image: linear-gradient(45deg, #1f1821, #cbcbeccb);}
+  16% {background-image: linear-gradient(60deg, #1f1821, #cbcbeccb);}
+  20%  {background-image: linear-gradient(750deg, #1f1821, #cbcbeccb);}
+  24%  {background-image: linear-gradient(90deg, #1f1821, #cbcbeccb);}
+  28%  {background-image: linear-gradient(105deg, #1f1821, #cbcbeccb);}
+  32%  {background-image: linear-gradient(120deg, #1f1821, #cbcbeccb);}
+  36%  {background-image: linear-gradient(135deg, #1f1821, #cbcbeccb);}
+  40% {background-image: linear-gradient(150deg, #1f1821, #cbcbeccb);}
+  44%  {background-image: linear-gradient(165deg, #1f1821, #cbcbeccb); filter:brightness(0.5);}
+  48%  {background-image: linear-gradient(180deg, #1f1821, #cbcbeccb);}
+  52%  {background-image: linear-gradient(195deg, #1f1821, #cbcbeccb);}
+  56%  {background-image: linear-gradient(210deg, #1f1821, #cbcbeccb);}
+  60%  {background-image: linear-gradient(225deg, #1f1821, #cbcbeccb);}
+  64% {background-image: linear-gradient(240deg, #1f1821, #cbcbeccb);}
+  68%  {background-image: linear-gradient(255deg, #1f1821, #cbcbeccb);}
+  72%  {background-image: linear-gradient(270deg, #1f1821, #cbcbeccb);}
+  76%  {background-image: linear-gradient(285deg, #1f1821, #cbcbeccb);}
+  82%  {background-image: linear-gradient(300deg, #1f1821, #cbcbeccb);}
+  86%  {background-image: linear-gradient(315deg, #1f1821, #cbcbeccb);}
+  92% {background-image: linear-gradient(330deg, #1f1821, #cbcbeccb);}
+  100%  {background-image: linear-gradient(345deg, #1f1821, #cbcbeccb); filter:brightness(1);}
+}
+
+@keyframes txtentr {
+    0%{opacity:0;}
+    100%{opacity:1}
+}
+#slide2 ,#slide4{
+    height: 100%;
+    width: 100%;
+}
+#topbar{
+    width: 100%;
+    height: 18.5%;
+    background-color:#a3a3bf;
+    visibility: hidden;
+    position: fixed;
+}
+#zfliph{
+    margin: 0;
+    text-align: center;
+    font-size:50px;
+    margin-top:20px;
+    font-family: samsungsharpsans;
+}
+#flipcookiimg{
+background:hsl(0, 0%, 96%);
+display:flex;
+height:100%;
+flex-direction: column-reverse;
+background-image: url(/flip-media/galaxy-z-flip4_highlights_compact_img.webp);
+background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 100px;
+}
+#slog1,#slog2{
+    font-size:100px;
+    text-align:center;
+    margin-bottom:0;
+}
+#entrimg{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#flipcookzflip4{
+    text-align: center;
+    color: #242426;
+ 
+
+}
+@keyframes textblurcm{
+   
+   0%{filter:blur(40px); visibility:hidden;}
+   100%{filter:blur(0px); visibility:visible;}
+}
+#colorpallet{
+    font-size:12px;
+}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ #sblue {
+  background-color: rgb(0, 0, 0);
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ #sblue {
+  background-color: #2195f300;
+}
+.container:hover input ~ #sgold {
+  background-color: rgb(0, 0, 0);
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ #sgold {
+  background-color: #2195f300;
+}
+.container:hover input ~ #sgraphite {
+  background-color: rgb(0, 0, 0);
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ #sgraphite {
+  background-color: #2195f300;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+#sblue{
+    background-color:#b9c4da;
+}
+#sgold{
+    background-color:#e3cdc5;
+}
+#sgraphite{
+    background-color:#45474b;
+}
+label.container{
+    border-radius: 10px;
+    border:solid 1px ;
+}
+.boxclrimg{
+    border-radius: 55px;
+    box-shadow: -1px -1px 4px 0px #33333359;
+}
+#colorpallet{
+    margin-top:20%;
+}
+#slideshowwer{
+    display:flex;
+    overflow: scroll;
+    display: flex;
+    overflow: scroll;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.sldsr{
+    margin-left: 50px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 20px 0px #232323;
+}
+#sldim1{
+    margin-left: 500px;
+}
+</style>
+    </head>
+    <body onscroll="tpbr()">
+        <div id="entersamsungname">
+       <div><p id="entersamp">samsung</p></div>
+    </div>
+  <div id="slide2">
+<div id="flipcookiimg"><p id="flipcookzflip4">Galaxy Z Flip4</p>
+  </div>
+</div>
+  <div id="slide3">
+  <div id="slog1"><p>The phone that claps back</p>
+    <div id="entrimg">
+<img id="side" class="boxclrimg" src="flip-media/galaxy-z-flip4_highlights_colors_blue_side.jpg">
+<div id="colorpallet">
+    <label class="container" id="lblue" onclick="changerclrb()">Blue
+        <input type="radio" checked="checked" id="iblue" name="radio">
+        <span class="checkmark" id="sblue"></span>
+      </label>
+      <label class="container" id="lgold" onclick="changerclg()">Gold
+        <input type="radio" id="igold" name="radio">
+        <span class="checkmark" id="sgold"></span>
+      </label>
+      <label class="container" id="lgraphite" onclick="changerclrgr()">Graphite
+        <input type="radio" id="igraphite" name="radio">
+        <span class="checkmark" id="sgraphite"></span>
+      </label>
+ </div>
+<img id="front" class="boxclrimg"src="flip-media/galaxy-z-flip4_highlights_colors_blue_front.jpg">
+</div>
+</div>
+
+
+</div>
+<div id="slide4">
+    <div id="slog2"><p>Goes with everything. Looks like nothing else.</p>
+        <div id="slideshowwer">
+            <img id="sldim1" class="sldsr" src="flip-media/slide/flip_1.jpg">
+            <img id="sldim2" class="sldsr" src="flip-media/slide/flip_2.jpg">
+            <img id="sldim3" class="sldsr" src="flip-media/slide/flip_3.jpg">
+            <img id="sldim4" class="sldsr" src="flip-media/slide/flip_4.jpg">
+        </div>
+    </div>
+</div>
+    </body>
+  <Script type="text/javascript">
+
+    function tpbr(){
+        var asp= (window.scrollY/window.innerHeight)*100;
+        if(asp>= 78.8){
+            document.querySelector("#flipcookzflip4").style.animation="textblurcm 2s";
+            document.querySelector("#flipcookzflip4").style.visibility="visible";
+        }
+        if(asp<= 78.8){
+            document.querySelector("#flipcookzflip4").style.visibility="hidden";
+        }
+        
+    }
+    function changerclg(){
+        document.querySelector("#lgold").style.background="#e3cdc5";
+        document.querySelector("#front").src="flip-media/galaxy-z-flip4_highlights_colors_pink_front.jpg"
+        document.querySelector("#side").src="flip-media/galaxy-z-flip4_highlights_colors_pink_side.jpg"
+    }
+    function changerclrb(){
+        document.querySelector("#lblue").style.background="#b9c4da";
+        document.querySelector("#front").src="flip-media/galaxy-z-flip4_highlights_colors_blue_front.jpg"
+        document.querySelector("#side").src="flip-media/galaxy-z-flip4_highlights_colors_blue_side.jpg"
+
+    }
+    function changerclrgr(){
+        document.querySelector("#lgraphite").style.background="#45474b";
+        document.querySelector("#front").src="flip-media/galaxy-z-flip4_highlights_colors_graphite_front.jpg"
+        document.querySelector("#side").src="flip-media/galaxy-z-flip4_highlights_colors_graphite_side.jpg"
+    }
+
+  </Script>
+</html>
